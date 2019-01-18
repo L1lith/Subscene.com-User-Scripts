@@ -9,7 +9,7 @@
 
 (()=>{
   async function downloadAll() {
-    const subURLS = [...document.querySelectorAll('.a1 a')].filter(node => node.parentNode.style.display !== "none").map(a => a.href)
+    const subURLS = [...document.querySelectorAll('.a1 a')].filter(node => node.parentNode.parentNode.style.display !== "none").map(a => a.href)
     for (let i = 0; i < subURLS.length; i++) {
       await downloadSub(subURLS[i])
     }
