@@ -1,3 +1,12 @@
+// ==UserScript==
+// @name         Subscene Instant Downloader
+// @version      0.1
+// @description  try to take over the world!
+// @author       L1lith
+// @include     http*://subscene.com/subtitles/*
+// @grant        none
+// ==/UserScript==
+
 (()=>{
   async function downloadSub(event) {
   	const {target} = event
