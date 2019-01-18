@@ -8,5 +8,5 @@
 // ==/UserScript==
 
 (()=>{
-  [...document.querySelectorAll('.a1 .positive-icon')].filter(node => !((node.textContent || "").toLowerCase().includes("english"))).map(node => node.parentNode.parentNode.parentNode).forEach(node => node.parentNode.removeChild(node))
+  [...document.querySelectorAll('.a1 .l')].filter(node => !((node.textContent || "").toLowerCase().includes("english"))).map(node => node.parentNode.parentNode.parentNode).forEach(node => node.parentNode.removeChild(node))
 })()
