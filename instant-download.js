@@ -8,7 +8,7 @@
 // ==/UserScript==
 
 (()=>{
-  async function downloadSub(event) {
+  async function downloadAllSubs(event) {
   	const {target} = event
   	let subDiv = null
   	event.preventDefault()
@@ -40,5 +40,5 @@
     b.initEvent("click", false, true)
     a.dispatchEvent(b)
   }
-  window.addEventListener('click', downloadSub)
+  window.addEventListener('click', downloadAllSubs)
 })()
