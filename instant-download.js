@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Subscene Instant Downloader
 // @version      0.1
-// @description  try to take over the world!
+// @description  Simply click a sub in the list and instead of navigating to the page it will instantly download
 // @author       L1lith
 // @include     http*://subscene.com/subtitles/*
 // @grant        none
