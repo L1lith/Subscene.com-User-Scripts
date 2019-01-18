@@ -1,29 +1,18 @@
 // ==UserScript==
-// @name         Subscene Instant Downloader
+// @name         Subscene Download All Button
 // @version      0.1
-// @description  Simply click a sub in the list and instead of navigating to the page it will instantly download
+// @description  Adds a button to download all the subs on the page
 // @author       L1lith
 // @include     http*://subscene.com/subtitles/*
 // @grant        none
 // ==/UserScript==
 
 (()=>{
-  async function downloadSub(event) {
-  	const {target} = event
-  	let subDiv = null
-  	event.preventDefault()
-  	if (target.querySelector('.a40') && target.tagName.toLowerCase() === "tr") {
-  		subDiv = target
-  	} else {
-  		let parent = target.parentNode
-  		while (parent && !subDiv) {
-  			if (parent.querySelector('.a40') && parent.tagName.toLowerCase() === "tr") subDiv = parent
-  			parent = parent.parentNode
-  		}
-  	}
-  	if (!subDiv) return
-  	const pageURL = subDiv.querySelector('.a1 a').href
-  	await downloadSub(pageURL)
+  async function downloadAll() {
+    const subURLS = [...document.querySelectorAll('.a1 a')].map(a => a.href)
+    for (let i = 0; i < subURLS.length; i++) {
+      await downloadSub(subURLS[i])
+    }
   }
   async function downloadSub(subURL) {
     const pageHTML = await (await fetch(subURL)).text()
@@ -40,5 +29,14 @@
     b.initEvent("click", false, true)
     a.dispatchEvent(b)
   }
-  window.addEventListener('click', downloadSub)
+  const downloadButton = document.createElement('button')
+  downloadButton.addEventListener('click', ()=>{
+    downloadAll().catch(console.log)
+  })
+  downloadButton.textContent = "Download All"
+  downloadButton.style.position = "fixed"
+  downloadButton.style.top = "15px"
+  downloadButton.style.right = "15px"
+  downloadButton.style.zIndex = 500
+  document.body.appendChild(downloadButton)
 })()
