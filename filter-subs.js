@@ -1,10 +1,19 @@
+// ==UserScript==
+// @name         Subscene Filter Subs
+// @version      0.1
+// @description  Adds an input box to filter the subs that appear
+// @author       L1lith
+// @include     http*://subscene.com/subtitles/*
+// @grant        none
+// ==/UserScript==
+
 (()=>{
   const subDivs = [...document.querySelectorAll('.a1')].map(node => node.parentNode)
   const filterInput = document.createElement('input')
   filterInput.addEventListener('input', ()=>{
     let {value} = filterInput
     if (value === "") {
-      subDivs.forEach(div => div.style.display = "inherit")
+      subDivs.forEach(div => {div.style.display = "inherit"})
       return
     }
     value = value.toLowerCase()
