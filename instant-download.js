@@ -12,12 +12,12 @@
   	const {target} = event
   	let subDiv = null
   	event.preventDefault()
-  	if (target.querySelector('.a40') && target.tagName.toLowerCase() === "tr") {
+  	if (target.querySelector('.a40') && (target.tagName || "").toLowerCase() === "tr") {
   		subDiv = target
   	} else {
   		let parent = target.parentNode
   		while (parent && !subDiv) {
-  			if (parent.querySelector('.a40') && parent.tagName.toLowerCase() === "tr") subDiv = parent
+  			if (parent.querySelector('.a40') && (parent.tagName || "").toLowerCase() === "tr") subDiv = parent
   			parent = parent.parentNode
   		}
   	}
