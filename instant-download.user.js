@@ -37,7 +37,6 @@
   async function downloadAllSubs(event) {
   	const {target} = event
   	let subDiv = null
-  	event.preventDefault()
   	if (target.querySelector('.a40') && (target.tagName || "").toLowerCase() === "tr") {
   		subDiv = target
   	} else {
@@ -48,6 +47,7 @@
   		}
   	}
   	if (!subDiv) return
+  	event.preventDefault()
   	const pageURL = subDiv.querySelector('.a1 a').href
   	await downloadSub(pageURL)
   }
