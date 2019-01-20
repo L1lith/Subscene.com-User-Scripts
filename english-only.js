@@ -1,4 +1,5 @@
 // ==UserScript==
+// @id           subscene-english-only
 // @name         Subscene English Only
 // @version      0.1
 // @description  Only english subs appear in the list

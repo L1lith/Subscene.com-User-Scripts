@@ -1,4 +1,5 @@
 // ==UserScript==
+// @id           subscene-download-all
 // @name         Subscene Download All Button
 // @version      0.1
 // @description  Adds a button to download all the subs on the page

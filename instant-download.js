@@ -1,4 +1,5 @@
 // ==UserScript==
+// @id           subscene-instant-download
 // @name         Subscene Instant Downloader
 // @version      0.1
 // @description  Simply click a sub in the list and instead of navigating to the page it will instantly download

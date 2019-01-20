@@ -1,4 +1,5 @@
 // ==UserScript==
+// @id           subscene-filter-subs
 // @name         Subscene Filter Subs
 // @version      0.1
 // @description  Adds an input box to filter the subs that appear
