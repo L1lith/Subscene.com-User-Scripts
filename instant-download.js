@@ -7,6 +7,7 @@
 // @include      http*://subscene.com/subtitles/*
 // @grant        none
 // @namespace    https://github.com/L1lith/Subscene.com-User-Scripts
+// @run-at document-end
 // ==/UserScript==
 
 (()=>{
