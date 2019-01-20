@@ -3,8 +3,9 @@
 // @version      0.1
 // @description  Adds a button to download all the subs on the page
 // @author       L1lith
-// @include     http*://subscene.com/subtitles/*
+// @include      http*://subscene.com/subtitles/*
 // @grant        none
+// @namespace    https://openuserjs.org
 // ==/UserScript==
 
 (()=>{
