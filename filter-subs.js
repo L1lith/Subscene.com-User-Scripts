@@ -3,7 +3,7 @@
 // @version      0.1
 // @description  Adds an input box to filter the subs that appear
 // @author       L1lith
-// @include     http*://subscene.com/subtitles/*
+// @include      http*://subscene.com/subtitles/*
 // @grant        none
 // @namespace    https://openuserjs.org
 // ==/UserScript==

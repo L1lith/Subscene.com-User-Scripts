@@ -3,7 +3,7 @@
 // @version      0.1
 // @description  Simply click a sub in the list and instead of navigating to the page it will instantly download
 // @author       L1lith
-// @include     http*://subscene.com/subtitles/*
+// @include      http*://subscene.com/subtitles/*
 // @grant        none
 // @namespace    https://openuserjs.org
 // ==/UserScript==
