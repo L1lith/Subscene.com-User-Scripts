@@ -5,7 +5,7 @@
 // @author       L1lith
 // @include      http*://subscene.com/subtitles/*
 // @grant        none
-// @namespace    https://openuserjs.org
+// @namespace    https://github.com/L1lith/Subscene.com-User-Scripts
 // ==/UserScript==
 
 (()=>{
